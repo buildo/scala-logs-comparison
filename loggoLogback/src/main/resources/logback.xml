@@ -1,0 +1,14 @@
+<Configuration>
+  <Appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+    <Encoder>
+      <Pattern>%d{HH:mm:ss.SSS} TKD [%thread] %-5level %logger{36} - %msg%n</Pattern>
+    </Encoder>
+  </Appender>
+
+  <Logger name="slick.jdbc.JdbcBackend.statement" level="debug">
+    <Appender-Ref ref="Console"/>
+  </Logger>
+  <Root level="info">
+    <Appender-Ref ref="Console"/>
+  </Root>
+</Configuration>
